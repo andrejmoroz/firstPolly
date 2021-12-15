@@ -1,12 +1,14 @@
 a = input()
 b = input()
-c = []
-m = len(b)
+a = list(set(a))
+b = list(set(b))
+c = list()
+n = len(b)
 for i in a:
-    if i in c:
-        continue
     for j in b:
-        if i != j in range(0, m+1):
+        if i not in b:
+            if i in c:
+                continue
             c.append(i)
             break
 print(c)
